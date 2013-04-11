@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>RAWR Toys</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+    </head>
+<body>
+  <nav id="main">
+    <div id="topLeft">
+      <%= link_to 'Home', finder_path %>
+      <%= link_to 'RAWR', about_path %>
+    </div>
+    <div id="bottomLeft">
+      <h3>depts</h3>
+      <!-- depts -->
+    </div>
+    <div id="logo">
+       <h2>logo</h2>
+    </div>
+    <div id="cart">
+       <h3>cart</h3>
+    </div>
+    <div id="search">
+       <h3>search</h3>
+    </div>
+  </nav>
+<%= yield %>
+<footer>
+
+</footer>
+</body>
+</html>

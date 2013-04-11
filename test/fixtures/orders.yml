@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cust_id: 1
+  sub_total: 9.99
+  GST: 9.99
+  PST: 9.99
+  HST: 9.99
+  status: MyString
+
+two:
+  cust_id: 1
+  sub_total: 9.99
+  GST: 9.99
+  PST: 9.99
+  HST: 9.99
+  status: MyString
