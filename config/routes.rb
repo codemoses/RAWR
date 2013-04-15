@@ -1,11 +1,15 @@
 RAWRWebsite::Application.routes.draw do
 
-  get "products/new"
-
-  get "products/create"
+  resources :customers
+  resources :provinces
 
   match "finder" => "finder#index", :as => 'finder', :via => :get
   match "about" => "finder#about", :as => 'about', :via => :get
+
+  match "search" => "finder#search", :as => 'search', :via => :get
+
+  match "results" => "finder#search_results", :as => 'results', :via => :post
+
 
   root :to => "finder#index"
 

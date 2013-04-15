@@ -13,8 +13,9 @@
       <%= link_to 'RAWR', about_path %>
     </div>
     <div id="bottomLeft">
-      <h3>depts</h3>
-      <!-- depts -->
+      <%= link_to 'Carnivores', '#' %>
+      <%= link_to 'Omnivores',  '#' %>
+      <%= link_to 'Herbivores', '#' %>
     </div>
     <div id="logo">
        <h2>logo</h2>
@@ -23,7 +24,11 @@
        <h3>cart</h3>
     </div>
     <div id="search">
-       <h3>search</h3>
+      <%= form_tag results_path do %>
+          <%= label_tag "Search" %>
+          <%= text_field_tag :keyword %>
+          <%= submit_tag "Search" %>
+      <% end %>
     </div>
   </nav>
 <%= yield %>
