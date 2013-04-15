@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :name, :price, :stock_quantity, :image_name
+  attr_accessible :description, :name, :price, :stock_quantity, :image_name, :department_id
 
-  has_one :product_dept
-  has_one :department, :through => :product_dept
+  belongs_to :department
 end

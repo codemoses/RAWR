@@ -1,5 +1,7 @@
 RAWRWebsite::Application.routes.draw do
 
+  resources :departments
+  resources :products
   resources :customers
   resources :provinces
 
@@ -10,6 +12,9 @@ RAWRWebsite::Application.routes.draw do
 
   match "results" => "finder#search_results", :as => 'results', :via => :post
 
+  match "carnivores" => "departments#carnivores", :as => 'carnivores'
+  match "omnivores" => "departments#omnivores", :as => 'omnivores'
+  match "herbivores" => "departments#herbivores", :as => 'herbivores'
 
   root :to => "finder#index"
 
